@@ -14,23 +14,18 @@ private_cidr1               =   "10.0.1.0/24"
 private_cidr2               =   "10.0.2.0/24"
 private_cidr3               =   "10.0.3.0/24"
 
-```
-###  Please add the following code into module.tf file
-```
-module "wordpress" {
-    source                      =   "./class5"
-    region                      =   "${var.region}"
-    cidr_block                  =   "${var.cidr_block}"       
-    public_cidr1                =   "${var.public_cidr1}"   
-    public_cidr2                =   "${var.public_cidr2}"    
-    public_cidr3                =   "${var.public_cidr3}"    
-    private_cidr1               =   "${var.private_cidr1}"      
-    private_cidr2               =   "${var.private_cidr2}"     
-    private_cidr3               =   "${var.private_cidr3}"      
-    tags                        =   "${var.tags}"
-}
+tags    =   {
+    Name                    =   "VPC_Project"
+    Environment             =   "Dev"
+    Team                    =   "DevOps"
+    Created_by              =   "Mustafa"
+    Department              =   "IT"
+    Bill                    =   "CFO"
+   }
+
 
 ```
+
 
 ### Please run 
 ``` 
